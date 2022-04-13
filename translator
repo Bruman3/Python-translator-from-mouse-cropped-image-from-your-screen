@@ -5,7 +5,8 @@ import pyautogui
 import pytesseract
 from langdetect import detect
 from googletrans import Translator
-#Made by Bruman3
+
+# Made by Bruman3
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Users\Hellen\Desktop\william's stuff\pytess\tesseract"
 translator = Translator()
@@ -62,11 +63,11 @@ if len(refPt) == 2:
 
 cv2.imwrite('cropimage.jpg', roi)
 img = Image.open(r'C:\Users\Hellen\PycharmProjects\stockthings\cropimage.jpg')
-text = pytesseract.image_to_string(img)
+text = pytesseract.image_to_string(img).lower()
 # Displaying the extracted text
 print('Image to text:')
 print(text[:-1])
-#image to text
+# image to text
 
 print(''
       '')
@@ -75,18 +76,15 @@ language = detect(text)
 print(f'language detected: {language}')
 print(''
       '')
-#detects language
+# detects language
 
 while 1:
     if language == 'en':
         print('Since text is english no further translation will be needed')
         break
     else:
-        print(''
-              '')
         translated = translator.translate(text)
         print(f"{translated.origin} ({translated.src}) --> {translated.text} ({translated.dest})")
         break
-#translates
 
 cv2.waitKey(0)
