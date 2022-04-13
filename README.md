@@ -4,4 +4,4 @@ After that pytesseract (ps. follow a youtube video to properly install it, unles
 Where it is translated by googletrans (remember to paste this 'pip install googletrans==3.1.0a0'into your terminal, or it will not work), do not use this program for complex languages such as arabic, hindi, etc.
 
 
-This is a small project to aid those in languages in unselect able/ highlightable documents.  
+This is a small project to aid those in languages in unselect able/ unhighlightable documents.  
