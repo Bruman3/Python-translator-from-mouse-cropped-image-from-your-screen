@@ -8,7 +8,10 @@ from googletrans import Translator
 
 # Made by Bruman3
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\Hellen\Desktop\william's stuff\pytess\tesseract"
+pytesseract.pytesseract.tesseract_cmd = r""
+#add tesseract location here             ^
+
+
 translator = Translator()
 
 refPt = []
@@ -62,7 +65,8 @@ if len(refPt) == 2:
 # crop image with mouse https://pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/
 
 cv2.imwrite('cropimage.jpg', roi)
-img = Image.open(r'C:\Users\Hellen\PycharmProjects\stockthings\cropimage.jpg')
+img = Image.open(r'  cropimage.jpg')
+#add image location^
 text = pytesseract.image_to_string(img).lower()
 # Displaying the extracted text
 print('Image to text:')
